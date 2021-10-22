@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NumberGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgX-UD-UJc">
+                                <rect key="frame" x="125" y="459" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-dX-ELN">
+                                <rect key="frame" x="173.66666666666666" y="508" width="43" height="30"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="GuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLb-vC-wFc"/>
+                                    <action selector="guessMeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBM-hM-FNC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zahl eingeben" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2I6-IM-Ybl">
+                                <rect key="frame" x="135" y="405" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="LFh-Mj-z79"/>
+                                    <constraint firstAttribute="height" constant="34" id="sAX-rn-Qwp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="onChangeTextField:" destination="BYZ-38-t0r" eventType="valueChanged" id="8yx-tK-OGh"/>
+                                    <action selector="onChangeTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="suX-er-OQd"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AgX-UD-UJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0be-lI-cAB"/>
+                            <constraint firstItem="AgX-UD-UJc" firstAttribute="top" secondItem="2I6-IM-Ybl" secondAttribute="bottom" constant="20" id="3VS-JH-oxz"/>
+                            <constraint firstItem="fdY-dX-ELN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y36-Od-QsW"/>
+                            <constraint firstItem="2I6-IM-Ybl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h41-zg-kb2"/>
+                            <constraint firstItem="2I6-IM-Ybl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oyr-rp-cns"/>
+                            <constraint firstItem="fdY-dX-ELN" firstAttribute="top" secondItem="AgX-UD-UJc" secondAttribute="bottom" constant="28" id="t8n-T6-tIP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessMeButton" destination="fdY-dX-ELN" id="JBx-fj-zVC"/>
+                        <outlet property="label" destination="AgX-UD-UJc" id="qln-rE-u7I"/>
+                        <outlet property="textField" destination="2I6-IM-Ybl" id="tMy-SC-Qqt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
